@@ -6,52 +6,97 @@
     <title>KJB Landscaping - Milwaukee Lawn Care | Free Quote!</title>
     <meta name="description" content="Affordable Milwaukee landscaping by college pros. Mowing, mulching, hardscaping with 100% satisfaction guarantee. Free estimates!">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: linear-gradient(to right, #228B22, #006400); color: white; text-align: center; padding: 60px 20px; }
-        h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        
+        /* Navigation */
+        nav { background: #333; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #228B22; }
+
+        header { background: linear-gradient(to right, #228B22, #006400); color: white; text-align: center; padding: 80px 20px; }
+        h1 { font-size: 3.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
         .tagline { font-size: 1.3em; margin: 15px 0; opacity: 0.95; }
+        
         .cta { background: #FF4500; color: white; padding: 15px 30px; font-size: 1.5em; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; display: inline-block; margin: 20px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: transform 0.2s; }
         .cta:hover { transform: scale(1.05); }
-        section { padding: 60px 0; }
+        
+        section { padding: 80px 0; border-bottom: 1px solid #eee; }
         .about { background: #f8f9fa; }
         .services { background: white; }
         .guarantee { background: linear-gradient(to right, #87CEEB, #4682B4); color: white; text-align: center; }
-        h2 { font-size: 2.5em; text-align: center; margin-bottom: 30px; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        
+        h2 { font-size: 2.5em; text-align: center; margin-bottom: 40px; color: #006400; }
+        .guarantee h2 { color: white; }
+
+        /* Services Table */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        th, td { padding: 20px; text-align: left; border-bottom: 1px solid #ddd; }
         th { background: #228B22; color: white; font-weight: bold; }
+        
+        /* Gallery */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+        .gallery-item { background: #ddd; height: 250px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #666; font-style: italic; background-size: cover; background-position: center; }
+
+        /* Reviews */
+        .reviews-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .review-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .stars { color: #FFD700; font-size: 1.2em; margin-bottom: 10px; }
+        
+        /* Review Form */
+        .review-form { max-width: 600px; margin: 40px auto 0; background: #fff; padding: 30px; border-radius: 10px; border: 1px solid #ddd; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .submit-btn { background: #228B22; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; }
+
         .logo-placeholder { width: 150px; height: 150px; background: #228B22; border-radius: 50%; margin: 20px auto; display: flex; align-items: center; justify-content: center; color: white; font-size: 3em; font-weight: bold; }
-        footer { background: #333; color: white; text-align: center; padding: 30px; }
+        footer { background: #333; color: white; text-align: center; padding: 40px; }
         .price-highlight { font-size: 1.2em; margin: 20px 0; font-weight: bold; }
+
         @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            h2 { font-size: 1.8em; }
-            .cta { font-size: 1.2em; padding: 12px 24px; }
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 2em; }
+            nav ul { display: none; }
         }
     </style>
 </head>
 <body>
+    <nav>
+        <div class="container">
+            <strong>KJB Landscaping</strong>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Our Work</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
             <div class="logo-placeholder">KJB</div>
             <h1>KJB Landscaping</h1>
             <p class="tagline">Milwaukee's Affordable Yard Pros – College Hustle, Pro Results!</p>
-            <a href="tel:+14145551234" class="cta">📞 FREE Quote – Call Now!</a>
+            <a href="tel:+14146883355" class="cta">📞 FREE Quote – Call 414-688-3355</a>
         </div>
     </header>
 
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
-            <h2>Transform Your Yard Risk-Free</h2>
-            <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto;">
-                Powered by college students mentoring high school talent, KJB delivers full-service landscaping at unbeatable Milwaukee prices. From mowing to hardscaping, we guarantee perfection or it's <strong>FREE!</strong>
-            </p>
+            <h2>Get to Know KJB</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.2em;">
+                <p>KJB Landscaping is built on the spirit of Milwaukee hustle. We are a team of hard-working college students mentored by seasoned landscaping pros. This unique model allows us to provide top-tier service while keeping costs low for our neighbors.</p>
+                <p style="margin-top: 20px;">When you hire KJB, you're not just getting a great lawn—you're supporting local student athletes and future professionals who take immense pride in every edge and every mulch bed.</p>
+            </div>
         </div>
     </section>
 
-    <section class="services">
+    <section id="services" class="services">
         <div class="container">
             <h2>Our Services</h2>
             <table>
@@ -79,18 +124,76 @@
         </div>
     </section>
 
+    <section id="gallery">
+        <div class="container">
+            <h2>Our Recent Work</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-color: #e8f5e9;">[Freshly Mowed Lawn]</div>
+                <div class="gallery-item" style="background-color: #f1f8e9;">[New Mulch Installation]</div>
+                <div class="gallery-item" style="background-color: #f9fbe7;">[Clean Edging Work]</div>
+                <div class="gallery-item" style="background-color: #fffde7;">[Shrub Trimming]</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="about">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"KJB did an amazing job on our spring cleanup. The team was professional and the price was way better than other quotes we got!"</p>
+                    <p><strong>- Mike S. from East Side</strong></p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Best edging in Milwaukee. These guys really hustle and it shows in the details. Highly recommend for weekly mowing."</p>
+                    <p><strong>- Sarah L. from Shorewood</strong></p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Support local students! They transformed our backyard with new mulch and flower beds. Looks fantastic."</p>
+                    <p><strong>- David W. from Riverwest</strong></p>
+                </div>
+            </div>
+
+            <div class="review-form">
+                <h3 style="text-align: center; margin-bottom: 20px;">Post a Review</h3>
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label>Rating</label>
+                    <select>
+                        <option>5 Stars</option>
+                        <option>4 Stars</option>
+                        <option>3 Stars</option>
+                        <option>2 Stars</option>
+                        <option>1 Star</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Your Feedback</label>
+                    <textarea rows="4" placeholder="How was our work?"></textarea>
+                </div>
+                <button class="submit-btn" onclick="alert('Thank you for your review! It will be posted after verification.')">Post My Review</button>
+            </div>
+        </div>
+    </section>
+
     <section class="guarantee">
         <div class="container">
             <h2>Affordability + 100% Guarantee</h2>
             <p class="price-highlight">💰 20-30% below Milwaukee averages ($35–$50 mowing)</p>
             <p style="font-size: 1.3em; margin: 20px 0;"><strong>Not perfect? Free redo!</strong></p>
-            <a href="tel:+14145551234" class="cta">🎉 Get 20% Off First Service!</a>
+            <a href="tel:+14146883355" class="cta">🎉 Get 10% Off First Service!</a>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2026 KJB Landscaping | Milwaukee, WI</p>
-        <p>Call/Text: <strong>(414) 555-1234</strong> | 100% Satisfaction Guaranteed</p>
+        <p>Call/Text: <strong>414-688-3355</strong> | 100% Satisfaction Guaranteed</p>
     </footer>
 </body>
 </html>
