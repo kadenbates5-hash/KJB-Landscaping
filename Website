@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJB Landscaping - Milwaukee Lawn Care | Free Quote!</title>
+    <meta name="description" content="Affordable Milwaukee landscaping by college pros. Mowing, mulching, hardscaping with 100% guarantee. Free estimates!">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: linear-gradient(to right, #228B22, #006400); color: white; text-align: center; padding: 60px 20px; }
+        h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .cta { background: #FF4500; color: white; padding: 15px 30px; font-size: 1.5em; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; display: inline-block; margin: 20px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+        .cta:hover { transform: scale(1.05); }
+        section { padding: 60px 0; }
+        .about { background: #f8f9fa; }
+        .services { background: white; }
+        .guarantee { background: linear-gradient(to right, #87CEEB, #4682B4); color: white; text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: rgba(255,255,255,0.2); }
+        .logo-placeholder { width: 200px; height: 200px; background: #228B22; border-radius: 50%; margin: 20px auto; display: flex; align-items: center; justify-content: center; color: white; font-size: 4em; font-weight: bold; }
+        footer { background: #333; color: white; text-align: center; padding: 30px; }
+        @media (max-width: 768px) { h1 { font-size: 2em; } .cta { font-size: 1.2em; padding: 12px 24px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>KJB Landscaping</h1>
+            <p>Milwaukee's Affordable Yard Pros – College Hustle, Pro Results!</p>
+            <div class="logo-placeholder">KJB</div> <!-- Replace with your logo image: <img src="your-logo.png" alt="KJB Logo"> -->
+            <a href="tel:+1414YOURNUMBER" class="cta">FREE Quote – Text YARD Now!</a>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Transform Your Yard Risk-Free</h2>
+            <p>Powered by college students mentoring high school talent, KJB delivers full-service landscaping at unbeatable Milwaukee prices. From mowing to hardscaping, we guarantee perfection or it's FREE!</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Our Services</h2>
+            <table>
+                <tr><th>Category</th><th>Services</th></tr>
+                <tr><td>Lawn Care</td><td>Mowing, edging, weed control, seasonal cleanups</td></tr>
+                <tr><td>Planting</td><td>Custom beds, mulching, tree/shrub/bush trimming</td></tr>
+                <tr><td>Hardscaping</td><td>Walkways, patios, fireplaces</td></tr>
+                <tr><td>Extras</td><td>Pressure washing, window cleaning</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="guarantee">
+        <div class="container">
+            <h2>Affordability + 100% Guarantee</h2>
+            <p>20-30% below Milwaukee averages ($35–$50 mowing). <strong>Not perfect? Free redo!</strong></p>
+            <a href="tel:+1414YOURNUMBER" class="cta">Get 20% Off First Service!</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 KJB Landscaping | Milwaukee, WI | Call/Text: [YOUR NUMBER] | 100% Satisfaction Guaranteed</p>
+        </div>
+    </footer>
+</body>
+</html>
