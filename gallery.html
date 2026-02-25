@@ -15,49 +15,105 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: var(--white); }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        nav { background: var(--white); border-bottom: 1px solid #eee; padding: 20px 0; }
+        
+        nav { background: var(--white); border-bottom: 1px solid #eee; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-size: 1.5em; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+        nav ul { list-style: none; display: flex; gap: 25px; }
         nav a { color: var(--text-dark); text-decoration: none; font-weight: bold; }
-        header { padding: 60px 0; text-align: center; background: var(--bg-light); }
+        nav a:hover { color: var(--secondary-color); }
+        
+        header { padding: 80px 0; text-align: center; background: var(--bg-light); }
         h1 { font-size: 2.5em; color: var(--primary-color); }
+        
         section { padding: 60px 0; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .gallery-item { background: #eee; height: 300px; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 8px; font-weight: bold; overflow: hidden; position: relative; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
-        .gallery-item span { position: absolute; z-index: 1; }
-        footer { background: var(--primary-color); color: var(--white); text-align: center; padding: 40px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .gallery-item { background: #eee; height: 350px; display: flex; align-items: flex-end; padding: 20px; border-radius: 8px; overflow: hidden; position: relative; color: white; transition: transform 0.3s; }
+        .gallery-item:hover { transform: scale(1.02); }
+        .gallery-item h3 { position: relative; z-index: 2; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .gallery-item .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.7)); z-index: 1; }
+        
+        footer { padding: 60px 0; background: #2c3e50; color: #fff; margin-top: 40px; }
+        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+        .footer-col h4 { margin-bottom: 20px; color: #fff; }
+        .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #3e4f5f; }
+        .footer-col ul { list-style: none; }
+        .footer-col a { color: #bdc3c7; text-decoration: none; line-height: 1.8; }
+        .footer-col a:hover { color: #fff; }
     </style>
 </head>
 <body>
     <nav>
         <div class="container">
-            <a href="index.html">KJB Landscaping</a>
-            <a href="index.html">← Back to Home</a>
+            <a href="index.html" class="logo">KJB Landscaping</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reviews.html">Testimonials</a></li>
+            </ul>
         </div>
     </nav>
+
     <header>
         <div class="container">
-            <h1>Our Work Portfolio</h1>
-            <p>A showcase of our landscaping and property maintenance projects across Milwaukee.</p>
+            <h1>Our Quality Work</h1>
+            <p>A showcase of our landscaping projects across Milwaukee.</p>
         </div>
     </header>
+
     <section>
         <div class="container">
             <div class="gallery-grid">
-                <!-- Image Placeholders -->
-                <div class="gallery-item"><span>Lawn Maintenance #1</span><img src="work1.jpg" alt="Lawn Care Example 1"></div>
-                <div class="gallery-item"><span>Lawn Maintenance #2</span><img src="work2.jpg" alt="Lawn Care Example 2"></div>
-                <div class="gallery-item"><span>Garden Bed #1</span><img src="work3.jpg" alt="Garden Bed Example 1"></div>
-                <div class="gallery-item"><span>Hardscaping #1</span><img src="work4.jpg" alt="Hardscaping Example 1"></div>
-                <div class="gallery-item)<span>Tree Trimming #1</span><img src="work5.jpg" alt="Tree Trimming Example 1"></div>
-                <div class="gallery-item"><span>Fall Cleanup #1</span><img src="work6.jpg" alt="Fall Cleanup Example 1"></div>
+                <div class="gallery-item" style="background: #4a7c59;">
+                    <div class="overlay"></div>
+                    <h3>Professional Lawn Mowing</h3>
+                </div>
+                <div class="gallery-item" style="background: #2c3e50;">
+                    <div class="overlay"></div>
+                    <h3>Fresh Mulch Installation</h3>
+                </div>
+                <div class="gallery-item" style="background: #555;">
+                    <div class="overlay"></div>
+                    <h3>Hardscape Pathway</h3>
+                </div>
+                <div class="gallery-item" style="background: #666;">
+                    <div class="overlay"></div>
+                    <h3>Spring/Fall Cleanup</h3>
+                </div>
+                <div class="gallery-item" style="background: #777;">
+                    <div class="overlay"></div>
+                    <h3>Shrub Trimming</h3>
+                </div>
+                <div class="gallery-item" style="background: #888;">
+                    <div class="overlay"></div>
+                    <h3>Flowerbed Design</h3>
+                </div>
             </div>
-            <p style="text-align: center; margin-top: 40px; color: var(--text-muted);">More images coming soon. We take pride in every property we maintain.</p>
         </div>
     </section>
+
     <footer>
         <div class="container">
-            <p>© 2026 KJB Landscaping | Quality Property Maintenance</p>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>KJB Landscaping</h4>
+                    <p>Established 2022</p>
+                    <p>Milwaukee, WI</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="reviews.html">Testimonials</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KJB Landscaping. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 </body>
