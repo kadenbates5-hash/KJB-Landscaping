@@ -3,53 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KJB Landscaping | Quality Milwaukee Property Maintenance</title>
-    <meta name="description" content="Professional Milwaukee landscaping services. Established in 2022. Quality lawn care, mulching, and hardscaping.">
+    <title>KJB Landscaping | Milwaukee's Premier Property Maintenance</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #4a7c59;
-            --bg-light: #f8f9fa;
-            --text-dark: #333333;
-            --text-muted: #666666;
+            --primary-color: #1a5c37;
+            --secondary-color: #d4af37;
+            --accent-color: #2e8b57;
+            --bg-dark: #0f2d1d;
+            --text-light: #f4f4f4;
+            --text-dark: #333;
             --white: #ffffff;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: var(--white); }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        body { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #f0f4f1; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
         
-        nav { background: var(--white); border-bottom: 1px solid #eee; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
+        nav { background: var(--bg-dark); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.2); }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
-        nav .logo { font-size: 1.5em; font-weight: bold; color: var(--primary-color); text-decoration: none; }
-        nav ul { list-style: none; display: flex; gap: 25px; }
-        nav a { color: var(--text-dark); text-decoration: none; font-weight: 500; font-size: 0.95em; transition: color 0.3s; }
+        nav .logo { font-size: 1.8em; font-weight: 800; color: var(--secondary-color); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { color: var(--text-light); text-decoration: none; font-weight: 600; font-size: 0.95em; transition: 0.3s; }
         nav a:hover { color: var(--secondary-color); }
+
+        header { 
+            padding: 150px 0; 
+            background: linear-gradient(rgba(15, 45, 29, 0.8), rgba(15, 45, 29, 0.8)), url('https://images.unsplash.com/photo-1558905619-1714249a6257?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center; 
+            color: var(--white);
+        }
+        h1 { font-size: 4em; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .tagline { font-size: 1.5em; margin-bottom: 40px; color: #e0e0e0; }
+        .cta-group { display: flex; gap: 20px; justify-content: center; }
+        .cta-btn { background: var(--secondary-color); color: var(--bg-dark); padding: 18px 40px; font-size: 1.1em; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); }
+        .cta-btn:hover { background: var(--white); transform: translateY(-3px); }
+        .cta-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .cta-secondary:hover { background: var(--white); color: var(--bg-dark); }
+
+        section { padding: 100px 0; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.8em; color: var(--primary-color); margin-bottom: 15px; position: relative; padding-bottom: 15px; }
+        .section-title h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: var(--secondary-color); }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { padding: 50px 30px; background: var(--white); border-radius: 20px; transition: 0.4s; text-align: center; border-bottom: 5px solid transparent; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .service-card:hover { transform: translateY(-10px); border-bottom: 5px solid var(--secondary-color); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .service-card h3 { font-size: 1.6em; color: var(--primary-color); margin-bottom: 20px; }
         
-        header { padding: 100px 0; background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); text-align: center; border-bottom: 1px solid #eee; }
-        .logo-img { width: 120px; height: 120px; background: var(--secondary-color); border-radius: 50%; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; color: white; overflow: hidden; }
-        .logo-placeholder { font-size: 2.5em; font-weight: bold; }
-        h1 { font-size: 3em; color: var(--primary-color); margin-bottom: 15px; }
-        .tagline { font-size: 1.25em; color: var(--text-muted); margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .cta-btn { background: var(--secondary-color); color: white; padding: 18px 35px; font-size: 1.1em; text-decoration: none; border-radius: 5px; display: inline-block; transition: background 0.3s, transform 0.2s; }
-        .cta-btn:hover { background: #3d664a; transform: translateY(-2px); }
+        .referral-box { background: var(--bg-dark); color: var(--white); padding: 60px; border-radius: 30px; text-align: center; margin-top: 50px; }
+        .referral-box h2 { color: var(--secondary-color); font-size: 2.5em; margin-bottom: 20px; }
+        .referral-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+        .ref-item { padding: 25px; border: 1px dashed var(--secondary-color); border-radius: 15px; }
+
+        footer { padding: 80px 0 30px; background: var(--bg-dark); color: var(--text-light); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px; }
+        .footer-col h4 { color: var(--secondary-color); font-size: 1.4em; margin-bottom: 25px; }
+        .contact-info p { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9em; color: #888; }
         
-        section { padding: 90px 0; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 2.2em; color: var(--primary-color); margin-bottom: 15px; }
-        .section-title p { color: var(--text-muted); font-size: 1.1em; }
-        
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .service-card { padding: 40px; border: 1px solid #eee; border-radius: 10px; transition: box-shadow 0.3s; background: var(--white); }
-        .service-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .service-card h3 { color: var(--primary-color); margin-bottom: 15px; }
-        
-        footer { padding: 60px 0; background: #2c3e50; color: #fff; }
-        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
-        .footer-col h4 { margin-bottom: 20px; color: #fff; }
-        .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #3e4f5f; }
-        .footer-col ul { list-style: none; }
-        .footer-col a { color: #bdc3c7; text-decoration: none; line-height: 1.8; }
-        .footer-col a:hover { color: #fff; }
+        .estimate-badge { background: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; vertical-align: middle; margin-left: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -67,53 +80,74 @@
 
     <header>
         <div class="container">
-            <div class="logo-img">
-                <div class="logo-placeholder">KJB</div>
+            <h1>Elevate Your Curb Appeal</h1>
+            <p class="tagline">Milwaukee's most trusted property maintenance. Quality Work, Professional Care, Rooted in Excellence.</p>
+            <div class="cta-group">
+                <a href="tel:4146883355" class="cta-btn">Get Free Estimate <span class="estimate-badge">NEW</span></a>
+                <a href="gallery.html" class="cta-secondary cta-btn">View Our Work</a>
             </div>
-            <h1>Milwaukee's Quality Landscaping</h1>
-            <p class="tagline">Professional property maintenance, lawn care, and hardscaping services tailored to your home's needs.</p>
-            <a href="tel:4146883355" class="cta-btn">Call for a Quote</a>
         </div>
     </header>
 
     <section id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>We provide a wide range of outdoor maintenance solutions.</p>
+                <h2>Our Professional Services</h2>
+                <p>Comprehensive outdoor care tailored to your specific needs.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <h3>Lawn Maintenance</h3>
-                    <p>Regular mowing, trimming, and edging to keep your yard looking pristine all season long.</p>
+                    <p>Precision mowing, trimming, and edging to keep your yard as the envy of the block.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Gutter Cleaning</h3>
+                    <p>Keep your home safe from water damage with our thorough and reliable gutter debris removal.</p>
                 </div>
                 <div class="service-card">
                     <h3>Mulch & Edging</h3>
-                    <p>Professional installation of premium mulch and crisp bed edging to enhance your curb appeal.</p>
+                    <p>Professional installation of premium mulch and crisp bed edging to define your landscape.</p>
                 </div>
                 <div class="service-card">
                     <h3>Hardscaping</h3>
-                    <p>Design and installation of pathways, patios, and retaining walls to transform your outdoor space.</p>
+                    <p>Expertly designed pathways, patios, and retaining walls built to last a lifetime.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background: var(--bg-light); text-align: center;">
+    <section style="background-color: var(--white);">
         <div class="container">
-            <h2>Ready to transform your property?</h2>
-            <p style="font-size: 1.5em; margin-bottom: 20px;">Call Kaden today: <a href="tel:4146883355" style="color: var(--secondary-color);">414-688-3355</a></p>
-            <p>Serving Milwaukee and surrounding areas.</p>
+            <div class="referral-box">
+                <h2>Referral Rewards Program</h2>
+                <p>Love our service? Share the love and get rewarded!</p>
+                <div class="referral-grid">
+                    <div class="ref-item">
+                        <h3>$25 Gift Card</h3>
+                        <p>Refer a new client for any standard service and choose a $25 gift card to any location of your choice!</p>
+                    </div>
+                    <div class="ref-item">
+                        <h3>$50 Gift Card</h3>
+                        <p>Refer a referral for a job over $300 and receive a $50 gift card to anywhere you choose!</p>
+                    </div>
+                </div>
+                <p style="margin-top: 30px; font-style: italic; font-size: 0.9em; opacity: 0.8;">*Lawn mowing referrals must be for a full season contract or combined with another service over $100 to qualify for rewards. Alternatively, enjoy $25 or $50 off your next major project!</p>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-col">
                     <h4>KJB Landscaping</h4>
-                    <p>Established 2022</p>
-                    <p>Milwaukee, WI</p>
+                    <p>Serving Milwaukee and surrounding areas since 2022. We give our word for the best service in the city.</p>
+                </div>
+                <div class="footer-col contact-info">
+                    <h4>Contact Us</h4>
+                    <p><strong>Phone:</strong> <a href="tel:4146883355" style="color: inherit;">414-688-3355</a></p>
+                    <p><strong>Location:</strong> Milwaukee, WI</p>
+                    <p><strong>Estimates:</strong> Free In-Person or Virtual</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -126,7 +160,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 KJB Landscaping. All rights reserved.</p>
+                &copy; 2026 KJB Landscaping | Established 2022 | Founder: Kaden Bates
             </div>
         </div>
     </footer>
