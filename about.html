@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | KJB Landscaping History & Mission</title>
+    <title>About Us | KJB Landscaping History & Founder</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #4a7c59;
-            --bg-light: #f8f9fa;
-            --text-dark: #333333;
-            --text-muted: #666666;
+            --primary-color: #1a5c37;
+            --secondary-color: #d4af37;
+            --bg-dark: #0f2d1d;
+            --text-light: #f4f4f4;
             --white: #ffffff;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: var(--white); }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; background-color: #f0f4f1; color: #333; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 25px; }
         
-        nav { background: var(--white); border-bottom: 1px solid #eee; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
+        nav { background: var(--bg-dark); padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
-        nav a { color: var(--text-dark); text-decoration: none; font-weight: bold; }
-        nav ul { list-style: none; display: flex; gap: 25px; }
-        nav a:hover { color: var(--secondary-color); }
+        nav .logo { font-size: 1.8em; font-weight: 800; color: var(--secondary-color); text-decoration: none; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { color: var(--text-light); text-decoration: none; font-weight: 600; }
 
-        header { padding: 80px 0; background: var(--bg-light); text-align: center; }
-        h1 { font-size: 2.5em; color: var(--primary-color); }
-        
-        section { padding: 60px 0; }
-        h2 { color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--secondary-color); display: inline-block; padding-bottom: 5px; }
-        p { margin-bottom: 20px; font-size: 1.1em; color: var(--text-muted); }
-        
-        .staff-section { background: var(--bg-light); border-radius: 8px; padding: 40px; margin-top: 40px; }
-        .staff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
-        .staff-card { background: var(--white); padding: 30px; border-radius: 8px; text-align: center; border: 1px solid #eee; }
-        .staff-photo { width: 120px; height: 120px; background: #ddd; border-radius: 50%; margin: 0 auto 20px; }
+        header { padding: 100px 0; background: linear-gradient(rgba(15, 45, 29, 0.7), rgba(15, 45, 29, 0.7)), url('https://images.unsplash.com/photo-1591115765373-520b7a2d726f?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; text-align: center; color: white; }
+        h1 { font-size: 3.5em; margin-bottom: 10px; }
 
-        footer { padding: 60px 0; background: #2c3e50; color: #fff; }
-        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
-        .footer-col h4 { margin-bottom: 20px; color: #fff; }
-        .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #3e4f5f; }
+        section { padding: 80px 0; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .founder-photo { background: #ddd; height: 500px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; color: #666; }
+        
+        .ceo-section { background: var(--bg-dark); color: white; border-radius: 30px; padding: 60px; margin-top: 50px; }
+        .ceo-section h2 { color: var(--secondary-color); font-size: 2.5em; margin-bottom: 30px; }
+        .accomplishments { list-style: none; margin: 20px 0; }
+        .accomplishments li { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .accomplishments li::before { content: '🏆'; }
+
+        footer { padding: 60px 0; background: var(--bg-dark); color: var(--text-light); text-align: center; }
+        .footer-logo { font-size: 1.5em; color: var(--secondary-color); font-weight: bold; margin-bottom: 20px; display: block; }
     </style>
 </head>
 <body>
@@ -56,72 +54,48 @@
 
     <header>
         <div class="container">
-            <h1>About KJB Landscaping</h1>
-            <p>Quality Work, Professional Care, Rooted in Milwaukee.</p>
+            <h1>Our Story</h1>
+            <p>Built on ambition, hard work, and a commitment to Milwaukee.</p>
         </div>
     </header>
 
     <section>
         <div class="container">
-            <h2>Our Mission</h2>
-            <p>At KJB Landscaping, our mission is simple: to provide high-quality landscaping services at fair prices while ensuring 100% customer satisfaction. We believe that every property deserves professional care, and we treat every yard as if it were our own.</p>
-            <p>We focus on precision, reliability, and excellence in everything we do, from basic lawn maintenance to complex hardscaping projects.</p>
-        </div>
-    </section>
+            <div class="about-grid">
+                <div>
+                    <h2 style="color: var(--primary-color); font-size: 2.5em; margin-bottom: 25px;">Rooted in Excellence</h2>
+                    <p style="margin-bottom: 20px;">Founded in 2022, KJB Landscaping was born out of a desire to provide the highest level of property maintenance to the Milwaukee area. What began as a local operation has quickly grown into one of the most successful and trusted landscaping names in the community.</p>
+                    <p>We don't just mow lawns or clean gutters; we manage your property with the same precision and care that we would our own. Our growth is a testament to our quality over hustle approach.</p>
+                </div>
+                <div class="founder-photo">[Photo of Kaden Bates]</div>
+            </div>
 
-    <section style="background: var(--bg-light);">
-        <div class="container">
-            <h2>Our History</h2>
-            <p>Established in 2022, KJB Landscaping began with a vision to bring fresh energy and dedicated service to the Milwaukee community. What started as a small operation has grown into a trusted local business known for its commitment to quality and attention to detail.</p>
-            <p>Since our founding, we have focused on building long-lasting relationships with our clients through honest work and exceptional results. We are proud to serve Milwaukee and the surrounding areas, helping our neighbors maintain beautiful and healthy outdoor spaces.</p>
-        </div>
-    </section>
+            <div class="ceo-section">
+                <h2>Meet the Founder: Kaden Bates</h2>
+                <p>KJB Landscaping isn't just a business—it's the result of a drive for excellence that starts at the top. Kaden Bates founded this company with a clear vision: to merge professional academic rigor with world-class manual service.</p>
+                
+                <div style="margin: 30px 0; line-height: 1.8;">
+                    <p>Currently, Kaden is attending <strong>UW-Madison</strong> as a <strong>Double Major in Political Science and Business</strong>. As an <strong>Honors Student</strong> with aspirations of becoming a <strong>Lawyer</strong>, Kaden brings a level of organizational detail and professional ethics to the landscaping industry that is rarely seen.</p>
+                </div>
 
-    <section class="staff-section">
-        <div class="container">
-            <h2>Meet Our Staff</h2>
-            <p>Our team is comprised of dedicated professionals who take pride in their work. We are committed to excellence and look forward to serving you.</p>
-            <div class="staff-grid">
-                <div class="staff-card">
-                    <div class="staff-photo"></div>
-                    <h3>Kaden Bates</h3>
-                    <p>Founder & Lead Specialist</p>
-                </div>
-                <div class="staff-card">
-                    <div class="staff-photo"></div>
-                    <h3>Team Member</h3>
-                    <p>Lawn Care Professional</p>
-                </div>
-                <div class="staff-card">
-                    <div class="staff-photo"></div>
-                    <h3>Team Member</h3>
-                    <p>Hardscape Expert</p>
-                </div>
+                <h3>Leadership & Accomplishments</h3>
+                <ul class="accomplishments">
+                    <li>UW-Madison Honors Program Member</li>
+                    <li>Double Major: Political Science & Business Administration</li>
+                    <li>Established KJB Landscaping in 2022 - 3+ Years of Profitable Growth</li>
+                    <li>Maintained 100% Client Satisfaction across hundreds of Milwaukee properties</li>
+                </ul>
+
+                <p style="margin-top: 30px; font-style: italic; border-left: 4px solid var(--secondary-color); padding-left: 20px; font-size: 1.2em;">"I give my personal word for the best service in the city. At KJB, we don't cut corners—we edge them to perfection. My academic journey at Madison teaches me the value of integrity and hard work, and I bring those exact values to your front yard every single day." — Kaden Bates</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4>KJB Landscaping</h4>
-                    <p>Established 2022</p>
-                    <p>Milwaukee, WI</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="index.html" style="color: #bdc3c7;">Home</a></li>
-                        <li><a href="gallery.html" style="color: #bdc3c7;">Gallery</a></li>
-                        <li><a href="about.html" style="color: #bdc3c7;">About Us</a></li>
-                        <li><a href="reviews.html" style="color: #bdc3c7;">Testimonials</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 KJB Landscaping. All rights reserved.</p>
-            </div>
+            <a href="index.html" class="footer-logo">KJB Landscaping</a>
+            <p>414-688-3355 | Milwaukee, WI</p>
+            <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.7;">&copy; 2026 KJB Landscaping. All rights reserved.</p>
         </div>
     </footer>
 </body>
