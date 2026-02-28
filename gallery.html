@@ -6,40 +6,41 @@
     <title>Gallery | KJB Landscaping Quality Work</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #4a7c59;
-            --bg-light: #f8f9fa;
-            --text-dark: #333333;
+            --primary-color: #1a5c37;
+            --secondary-color: #d4af37;
+            --bg-dark: #0f2d1d;
+            --text-light: #f4f4f4;
             --white: #ffffff;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: var(--white); }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; background-color: #f0f4f1; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
         
-        nav { background: var(--white); border-bottom: 1px solid #eee; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
+        nav { background: var(--bg-dark); padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
-        nav .logo { font-size: 1.5em; font-weight: bold; color: var(--primary-color); text-decoration: none; }
-        nav ul { list-style: none; display: flex; gap: 25px; }
-        nav a { color: var(--text-dark); text-decoration: none; font-weight: bold; }
-        nav a:hover { color: var(--secondary-color); }
+        nav .logo { font-size: 1.8em; font-weight: 800; color: var(--secondary-color); text-decoration: none; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { color: var(--text-light); text-decoration: none; font-weight: 600; }
+
+        header { padding: 100px 0; background: linear-gradient(rgba(15, 45, 29, 0.7), rgba(15, 45, 29, 0.7)), url('https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; text-align: center; color: white; }
+        h1 { font-size: 3.5em; margin-bottom: 10px; }
+
+        section { padding: 80px 0; }
         
-        header { padding: 80px 0; text-align: center; background: var(--bg-light); }
-        h1 { font-size: 2.5em; color: var(--primary-color); }
-        
-        section { padding: 60px 0; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .gallery-item { background: #eee; height: 350px; display: flex; align-items: flex-end; padding: 20px; border-radius: 8px; overflow: hidden; position: relative; color: white; transition: transform 0.3s; }
-        .gallery-item:hover { transform: scale(1.02); }
-        .gallery-item h3 { position: relative; z-index: 2; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-        .gallery-item .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.7)); z-index: 1; }
-        
-        footer { padding: 60px 0; background: #2c3e50; color: #fff; margin-top: 40px; }
-        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
-        .footer-col h4 { margin-bottom: 20px; color: #fff; }
-        .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #3e4f5f; }
-        .footer-col ul { list-style: none; }
-        .footer-col a { color: #bdc3c7; text-decoration: none; line-height: 1.8; }
-        .footer-col a:hover { color: #fff; }
+        .gallery-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 50px; flex-wrap: wrap; }
+        .tab-btn { padding: 12px 30px; border: 2px solid var(--primary-color); background: transparent; color: var(--primary-color); border-radius: 50px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .tab-btn.active, .tab-btn:hover { background: var(--primary-color); color: white; }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+        .gallery-item { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .gallery-img { width: 100%; height: 250px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.9em; }
+        .gallery-content { padding: 20px; }
+        .gallery-content h3 { color: var(--primary-color); margin-bottom: 10px; }
+        .gallery-content p { font-size: 0.95em; color: #666; }
+
+        footer { padding: 60px 0; background: var(--bg-dark); color: var(--text-light); text-align: center; }
+        .footer-logo { font-size: 1.5em; color: var(--secondary-color); font-weight: bold; margin-bottom: 20px; display: block; }
     </style>
 </head>
 <body>
@@ -57,37 +58,69 @@
 
     <header>
         <div class="container">
-            <h1>Our Quality Work</h1>
-            <p>A showcase of our landscaping projects across Milwaukee.</p>
+            <h1>Our Masterpieces</h1>
+            <p>Visual excellence in every Milwaukee neighborhood we serve.</p>
         </div>
     </header>
 
     <section>
         <div class="container">
+            <div class="gallery-tabs">
+                <button class="tab-btn active">All Work</button>
+                <button class="tab-btn">Lawn Mowing</button>
+                <button class="tab-btn">Gutter Cleaning</button>
+                <button class="tab-btn">Hardscaping</button>
+                <button class="tab-btn">Mulch & Edging</button>
+            </div>
+
             <div class="gallery-grid">
-                <div class="gallery-item" style="background: #4a7c59;">
-                    <div class="overlay"></div>
-                    <h3>Professional Lawn Mowing</h3>
+                <!-- Lawn Mowing -->
+                <div class="gallery-item">
+                    <div class="gallery-img">[Image: Perfectly manicured lawn with stripes]</div>
+                    <div class="gallery-content">
+                        <h3>Lawn Mowing Excellence</h3>
+                        <p>Weekly maintenance featuring our signature diagonal stripes and precision edging.</p>
+                    </div>
                 </div>
-                <div class="gallery-item" style="background: #2c3e50;">
-                    <div class="overlay"></div>
-                    <h3>Fresh Mulch Installation</h3>
+                <!-- Gutter Cleaning -->
+                <div class="gallery-item">
+                    <div class="gallery-img">[Image: Clean gutters on a brick home]</div>
+                    <div class="gallery-content">
+                        <h3>Gutter Debris Removal</h3>
+                        <p>Complete cleaning and downspout flushing to ensure proper drainage.</p>
+                    </div>
                 </div>
-                <div class="gallery-item" style="background: #555;">
-                    <div class="overlay"></div>
-                    <h3>Hardscape Pathway</h3>
+                <!-- Hardscaping -->
+                <div class="gallery-item">
+                    <div class="gallery-img">[Image: Stone paver walkway through garden]</div>
+                    <div class="gallery-content">
+                        <h3>Stone Pathway</h3>
+                        <p>A custom designed flagstone walkway that adds timeless elegance to the backyard.</p>
+                    </div>
                 </div>
-                <div class="gallery-item" style="background: #666;">
-                    <div class="overlay"></div>
-                    <h3>Spring/Fall Cleanup</h3>
+                <!-- Mulch & Edging -->
+                <div class="gallery-item">
+                    <div class="gallery-img">[Image: Fresh dark mulch and crisp bed edging]</div>
+                    <div class="gallery-content">
+                        <h3>Premium Mulching</h3>
+                        <p>Double-ground espresso mulch and hand-defined bed edges for maximum curb appeal.</p>
+                    </div>
                 </div>
-                <div class="gallery-item" style="background: #777;">
-                    <div class="overlay"></div>
-                    <h3>Shrub Trimming</h3>
+                <!-- Lawn Mowing 2 -->
+                <div class="gallery-item">
+                    <div class="gallery-img">[Image: Large estate lawn with professional finish]</div>
+                    <div class="gallery-content">
+                        <h3>Estate Maintenance</h3>
+                        <p>Comprehensive care for larger properties, ensuring every corner is perfect.</p>
+                    </div>
                 </div>
-                <div class="gallery-item" style="background: #888;">
-                    <div class="overlay"></div>
-                    <h3>Flowerbed Design</h3>
+                <!-- Gutter Cleaning 2 -->
+                <div class="gallery-item">
+                    <div class="gallery-img">[Image: Gutter guard installation]</div>
+                    <div class="gallery-content">
+                        <h3>Advanced Gutter Care</h3>
+                        <p>From simple cleanings to system checks, we keep your roof line functional.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,26 +128,22 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4>KJB Landscaping</h4>
-                    <p>Established 2022</p>
-                    <p>Milwaukee, WI</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="reviews.html">Testimonials</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 KJB Landscaping. All rights reserved.</p>
-            </div>
+            <a href="index.html" class="footer-logo">KJB Landscaping</a>
+            <p>Quality Milwaukee Property Maintenance | Established 2022</p>
+            <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.7;">&copy; 2026 KJB Landscaping. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Simple tab functionality placeholder
+        const tabs = document.querySelectorAll('.tab-btn');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                // In a real app, this would filter the grid items
+            });
+        });
+    </script>
 </body>
 </html>
